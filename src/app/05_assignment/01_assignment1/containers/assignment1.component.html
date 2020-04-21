@@ -8,6 +8,17 @@
     <li class="list-group-item">Display the result on the page via string interpolation</li>
   </ul>
   <div class="container your-code">
-    <h6>Remove this &lt;h3&gt; and create your HTML here</h6>
+    <input type="text" class="form-control" id="box" 
+      placeholder="Enter your text here..." 
+      (input)="onTextInput($event)">
+    <div class="container" id="box" *ngIf="text; else noText">
+      {{ text }}
+    </div>
   </div>
 </div>
+
+<ng-template #noText>
+  <div class="alert alert-danger" id="box">
+      No text entered!!
+  </div>
+</ng-template>
