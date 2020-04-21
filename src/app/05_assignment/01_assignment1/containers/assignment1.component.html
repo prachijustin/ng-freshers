@@ -10,7 +10,8 @@
   <div class="container your-code">
     <input type="text" class="form-control" id="box" 
       placeholder="Enter your text here..." 
-      (input)="onTextInput($event)">
+      #element
+      (input)="onTextInput(element.value)">
     <div class="container" id="box" *ngIf="text; else noText">
       {{ text }}
     </div>

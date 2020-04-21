@@ -9,8 +9,7 @@ export class Assignment1Component {
   
   text: string
 
-  onTextInput(event: KeyboardEvent){
-    const inputElement = event.target as HTMLInputElement
-    this.text = inputElement.value
+  onTextInput(text: string){
+    this.text = text
   }
 }
